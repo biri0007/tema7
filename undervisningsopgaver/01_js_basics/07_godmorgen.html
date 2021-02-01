@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>øvelse 7</title>
+</head>
+
+
+<body>
+
+    <p>Godmorgen mellem kl. 5 og kl 10</p>
+    <p>Goddag mellem kl 10 og 18</p>
+    <p>Godaften mellem 18 og 24</p>
+    <p>Godnat mellem 24 og 5</p>
+
+
+    <script>
+        let besked;
+        let tid = new Date().getHours();
+
+        if (tid >= 5 && tid <= 10) {
+            besked = "Godmorgen";
+
+        } else if (tid >= 10 && tid <= 18) {
+            besked = "Goddag";
+
+        } else if (tid >= 18 && tid <= 24) {
+            besked = "Godaften";
+
+        } else if (tid >= 24 && tid <= 5) {
+            besked = "Godnat";
+        }
+
+        console.log(besked);
+
+    </script>
+
+
+
+</body>
+
+</html>
