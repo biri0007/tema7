@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>øvelse 12</title>
+</head>
+
+<body>
+
+
+    <p>Din alder</p>
+    <input type="text" id="dinAlderTxt">
+
+    <p>Din dates alder</p>
+    <input type="text" id="datesAlderTxt">
+    <button>Går det?</button>
+
+</body>
+
+
+
+<script>
+    let dinAlder;
+    let datesAlder;
+    let minimumAlder;
+    let maksimumAlder;
+
+    document.querySelector("button").addEventListener("click", buttonClicked);
+
+    function buttonClicked() {
+        dinAlder = document.querySelector("#dinAlderTxt").value;
+        datesAlder = document.querySelector("#datesAlderTxt").value;
+
+        //reglen for hvad er den yngste alder, din date må være
+        minimumAlder = Math.round(dinAlder / 2 + 7);
+        maksimumAlder = Math.round((dinAlder - 7) * 2);
+        console.log(`Din date må minimum være ${minimumAlder} år`);
+        console.log(`Din date må maksimum være ${maksimumAlder} år`);
+
+        if (dinAlder < 15 || datesAlder < 15) {
+            console.log("Du eller din date er for ung");
+
+        } else {
+            if (datesAlder >= minimumAlder && datesAlder <= maksimumAlder) {
+                console.log("Jeres alder er passende");
+
+            } else if (datesAlder < minimumAlder) {
+                console.log(`Du er ${dinAlder} år, og din date er ${datesAlder} år. Din date er altså ${minimumAlder-datesAlder} år for ung`);
+
+            } else if (datesAlder >= maksimumAlder) {
+                console.log(`Du er ${dinAlder} år, og din date er ${datesAlder} år. Din date er altså ${datesAlder-maksimumAlder} år for gammel`);
+            }
+        }
+    }
+
+</script>
+
+
+</html>
