@@ -3,10 +3,83 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>øvelse </title>
+    <title>øvelse 1</title>
 </head>
 
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+        justify-content: space-around;
+
+        margin: 0 150px;
+    }
+
+
+    #article1 {
+        display: grid;
+        grid-column: 1/span 1;
+        border: 1px solid black;
+    }
+
+    #article2 {
+        display: grid;
+        grid-column: 2/span 1;
+        border: 1px solid black;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    header,
+    footer {
+        display: grid;
+        justify-content: space-around;
+        margin: 30px 0;
+        border: 1px solid black;
+    }
+
+</style>
+
+
+
+
+
 <body>
+
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Undertitel</h2>
+
+            <article id="article1">
+                <img src="https://placeimg.com/640/480/nature/grayscale" alt="">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cum hic repudiandae a animi quia asperiores eos optio libero? Similique a, aut illum quos nobis dolorem. Dolor, incidunt, illum. Id.</p>
+            </article>
+
+            <article id="article2">
+                <img src="https://placeimg.com/640/480/arch/grayscale" alt="">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sequi laudantium quaerat nobis delectus voluptatem, porro et dolor eligendi quo provident facilis reprehenderit, dignissimos dolore corporis odio temporibus quae quas!</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>Footer</footer>
+
+
 
 </body>
 
