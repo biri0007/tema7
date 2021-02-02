@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <title>øvelse 2a</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+
+        <section>
+            <article id="article1">
+                <img src="nature.jpeg" alt="">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cum hic repudiandae a animi quia asperiores eos optio libero? Similique a, aut illum quos nobis dolorem. Dolor, incidunt, illum. Id.</p>
+            </article>
+
+            <article id="article2">
+                <img src="arch.jpeg" alt="">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sequi laudantium quaerat nobis delectus voluptatem, porro et dolor eligendi quo provident facilis reprehenderit, dignissimos dolore corporis odio temporibus quae quas!</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>Footer</footer>
+
+
+
+    <script>
+        const overskrift = document.querySelector("h1");
+        console.log(overskrift);
+
+        const underoverskrift = document.querySelector("h2");
+        console.log(underoverskrift);
+
+        //eller man kan gøre på nedenstående måde:
+        //console.log(overskrift.textContent);
+
+        const h3overskrift = document.querySelector("h3");
+        console.log(h3overskrift);
+
+        //article:nth-child(2) h3 = h3'eren i article 2. nth-child(2) = det '2. child' i rækken af articles
+        const h3overskrift2 = document.querySelector("article:nth-child(2) h3");
+        console.log(h3overskrift2);
+
+        const billede = document.querySelector("img");
+        console.log(billede);
+
+        const billede2 = document.querySelector("article:nth-child(2) img");
+        console.log(billede2);
+
+        const tekst = document.querySelector("p");
+        console.log(tekst);
+
+        const tekst2 = document.querySelector("article:nth-child(2) p");
+        console.log(tekst2);
+
+    </script>
+
+
+</body>
+
+</html>
