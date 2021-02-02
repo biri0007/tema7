@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>øvelse 11</title>
+</head>
+
+<body>
+
+    <p>Gæt et tal mellem 0-20</p>
+    <input type="text" id="gæt">
+    <button>Klik for at se, om du har gættet rigtigt</button>
+
+
+
+    <script>
+        const tal = Math.round(Math.random() * 20)
+        //her bruges der const, da tallet IKKE skal ændres – værdien er konstant, så det ikke ændrer sig, og brugeren derved ikke har en chance for at gætte tallet lol
+        let antalGæt = 0;
+
+        document.querySelector("button").addEventListener("click", guessTal);
+
+        function guessTal() {
+
+            antalGæt++;
+
+            const guess = document.querySelector("#gæt").value;
+            console.log("Tallet er", tal);
+            //console log ovenfor er udkommenteret, så man ikke kan se det tal, man skal gætte på lol
+            console.log("Dit gæt:", guess);
+
+            if (guess == tal) {
+                console.log(`Du har gættet rigtigt JUHUUU, og du brugte ${antalGæt} gæt`);
+            } else if (guess < tal) {
+                console.log("Dit gæt er for lavt, prøv igen");
+
+            } else {
+                console.log("Dit gæt er for højt, prøv igen");
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
