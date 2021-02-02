@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <title>øvelse 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+
+        <section>
+            <article id="article1">
+                <img src="pics/nature.jpeg" alt="">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cum hic repudiandae a animi quia asperiores eos optio libero? Similique a, aut illum quos nobis dolorem. Dolor, incidunt, illum. Id.</p>
+            </article>
+
+            <article id="article2">
+                <img src="pics/arch.jpeg" alt="">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sequi laudantium quaerat nobis delectus voluptatem, porro et dolor eligendi quo provident facilis reprehenderit, dignissimos dolore corporis odio temporibus quae quas!</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>Footer</footer>
+
+
+
+    <script>
+        const overskrift = document.querySelector("h1");
+        const underoverskrift = document.querySelector("h2");
+
+        const billede = document.querySelector("img");
+        const h3overskrift = document.querySelector("h3");
+        const tekst = document.querySelector("p");
+
+        const billede2 = document.querySelector("article:nth-child(2) img");
+        const h3overskrift2 = document.querySelector("article:nth-child(2) h3");
+        const tekst2 = document.querySelector("article:nth-child(2) p");
+
+        overskrift.textContent;
+
+        overskrift.textContent = "Billeder"
+        console.log(overskrift.textContent);
+
+        console.log(underoverskrift);
+
+
+        //article 1
+        console.log(billede);
+        billede.src = "pics/arch.jpeg";
+        billede.alt = "Billede af arkitektur"
+
+        h3overskrift.textContent = "Natur"
+        console.log(h3overskrift.textContent);
+
+        tekst.textContent = "Her er en tekst om natur."
+        console.log(tekst.textContent);
+
+
+        //article 2
+        console.log(billede2);
+        billede2.src = "pics/nature.jpeg";
+        billede2.alt = "Billede af natur"
+
+        h3overskrift2.textContent = "Arkitektur"
+        console.log(h3overskrift2.textContent);
+
+        tekst2.innerHTML = "Her er en tekst om <b>arkitektur</b>."
+        console.log(tekst2.textContent);
+
+
+        //tilføj ny article med overskrift, billede og tekst
+        let mainSection = document.querySelector("section");
+
+        //nyt article element
+        let newArticle = document.createElement("article");
+
+
+
+        //nyt img-element
+        let nytBillede = document.createElement("img");
+        //definerer src i det nye img-element
+        nytBillede.src = "pics/tech.jpeg"
+        //sætter billedet ind i article
+        newArticle.appendChild(nytBillede);
+
+
+        //ny H3-element
+        let nyOverskrift = document.createElement("h3");
+        //tekst til H3-overskriften
+        let overskriftTxt = document.createTextNode("Article 3");
+
+        //indsætter tekst i overskriften
+        nyOverskrift.appendChild(overskriftTxt);
+        //tilføjer overskrift i  article
+        newArticle.appendChild(nyOverskrift);
+        //tilføjer article i section
+        mainSection.appendChild(newArticle);
+
+
+        //ny p
+        let nyTekst = document.createElement("p");
+        //tekst til den nye p
+        nyTekst.innerHTML = "Dette er teksten i article 3"
+        //sætter p ind i article
+        newArticle.appendChild(nyTekst);
+
+    </script>
+
+
+</body>
+
+</html>
