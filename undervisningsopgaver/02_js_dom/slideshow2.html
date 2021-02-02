@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>slideshow 1</title>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Tro på det...</h1>
+    </header>
+
+    <section>
+        <img src="slides/img1.png" alt="">
+        <button>Videre</button>
+
+        <p>Billeder brugt med tilladelse af Rasmus Bregnhøi</p>
+    </section>
+
+
+    <script>
+        //array med alle billeder
+        let billeder = ["img1.png", "img2.png", "img3.png", "img4.png", "img5.png", "img6.png", "img7.png", "img8.png"]
+
+        //vælger billeder der skal fifles med
+        const billede = document.querySelector("img");
+        let nummer = 0;
+
+        const knap = document.querySelector("button");
+        knap.addEventListener("click", skiftBillede);
+
+        function skiftBillede() {
+            if (nummer < 7) {
+                nummer++;
+                billede.src = "slides/" + billeder[nummer];
+            } else {
+                nummer = 0;
+                billede.src = "slides/" + billeder[nummer];
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
