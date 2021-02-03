@@ -145,13 +145,14 @@
                 article.classList.toggle("shadow");
                 delay.style.transitionDuration = "2s";
                 delay.style.transitionTimingFunction = "ease-in-out";
-
+                console.log("Box shadow tilføjet");
             }
 
             article.addEventListener("mouseout", shadowOff);
 
             function shadowOff() {
                 article.classList.toggle("shadow");
+                console.log("Box shadow fjernet");
             }
 
         }
