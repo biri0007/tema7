@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <title>øvelse 8</title>
+</head>
+
+<body>
+
+
+    <ul id="display"></ul>
+
+
+    <script>
+        const playliste = ["track 1", "track 2", "track 3", "track 4", "track 5", "track 6", "track 7", "track 8", "track 9", "track 10"];
+
+        /*
+        tracks.forEach(visTracks)
+
+        function visTracks(track) {
+            console.log(track);
+        }
+        */
+
+        //en anden måde at skrive ovenstående function i én linje/"sætning"
+        // tracks.forEach(track => console.log(track));
+
+        playliste.forEach(track => display.innerHTML += "<li>" + track + "</li>");
+
+    </script>
+
+</body>
+
+</html>
