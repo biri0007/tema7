@@ -32,11 +32,16 @@
         const knap = document.querySelector("button");
         knap.addEventListener("click", skiftBillede);
 
+
         function skiftBillede() {
-            if (nummer < 7) {
+            billede.src = "slides/" + billeder[nummer];
+
+            if (nummer <= 6) {
                 nummer++;
-                billede.src = "slides/" + billeder[nummer];
+                knap.textContent = "Videre";
+
             } else {
+                knap.textContent = "Forfra";
                 nummer = 0;
                 billede.src = "slides/" + billeder[nummer];
             }
