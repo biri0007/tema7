@@ -18,13 +18,13 @@
         <h2>Undertitel</h2>
 
         <section>
-            <article>
+            <article class="shadow">
                 <img src="https://placeimg.com/640/480/arch" alt="">
                 <h3>Article 1</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cum hic repudiandae a animi quia asperiores eos optio libero? Similique a, aut illum quos nobis dolorem. Dolor, incidunt, illum. Id.</p>
             </article>
 
-            <article>
+            <article class="shadow">
                 <img src="pics/arch.jpeg" alt="">
                 <h3>Article 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sequi laudantium quaerat nobis delectus voluptatem, porro et dolor eligendi quo provident facilis reprehenderit, dignissimos dolore corporis odio temporibus quae quas!</p>
@@ -136,23 +136,30 @@
 
 
             //ØVELSE 7
-            let article = document.querySelector("article");
-            const delay = document.querySelector("article");
 
-            article.addEventListener("mouseover", shadowOn);
+            newArticle.classList.add("shadow");
 
-            function shadowOn() {
-                article.classList.toggle("shadow");
-                delay.style.transitionDuration = "2s";
-                delay.style.transitionTimingFunction = "ease-in-out";
-                console.log("Box shadow tilføjet");
-            }
 
-            article.addEventListener("mouseout", shadowOff);
+            //let article = document.querySelector("article");
+            document.querySelector("article:nth-child(1)").addEventListener("mouseover", shadowOff);
+            document.querySelector("article:nth-child(1)").addEventListener("mouseout", shadowOn);
+
+            document.querySelector("article:nth-child(2)").addEventListener("mouseover", shadowOff);
+            document.querySelector("article:nth-child(2)").addEventListener("mouseout", shadowOn);
+
+            document.querySelector("article:nth-child(3)").addEventListener("mouseover", shadowOff);
+            document.querySelector("article:nth-child(3)").addEventListener("mouseout", shadowOn);
 
             function shadowOff() {
-                article.classList.toggle("shadow");
+                this.classList.toggle("shadow");
+                this.style.transitionDuration = "2s";
+                this.style.transitionTimingFunction = "ease-in-out";
                 console.log("Box shadow fjernet");
+            }
+
+            function shadowOn() {
+                this.classList.toggle("shadow");
+                console.log("Box shadow tilføjet");
             }
 
         }
