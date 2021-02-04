@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>json: øvelse 1</title>
+
+    <style>
+        #border {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <section></section>
+    <template>
+        <article>
+            <h3></h3>
+            <img src="" alt="">
+            <p class="type"></p>
+            <p class="levested"></p>
+        </article>
+    </template>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("DOM loaded");
+
+            let container = document.querySelector("section");
+            let temp = document.querySelector("template");
+
+
+            //angiv hvilken fil, der skal hentes ind
+            const fil = "alleDyr.json"
+
+            //henter json-filen ind. (fil) refererer til ovenstående
+            async function hentdata(fil) {
+                const result = await fetch(fil);
+                const json = await result.json();
+                vis(json);
+            }
+
+
+            function vis(json) {
+                json.forEach(etDyr => {
+                    let klon = temp.cloneNode(true).content;
+
+                    klon.querySelector("h3").textContent = etDyr.navn;
+                    klon.querySelector("img").src = `${etDyr.billede}`;
+                    klon.querySelector("img").alt = `${etDyr.navn}`;
+                    klon.querySelector(".type").innerHTML += `Type: ${etDyr.type}`;
+                    klon.querySelector(".levested").innerHTML += `Levested: ${etDyr.levested}`;
+                    //tilføj klon til tagget
+                    container.appendChild(klon);
+                })
+            }
+
+            hentdata(fil);
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
