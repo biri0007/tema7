@@ -8,11 +8,7 @@
 
 <body>
 
-    <article id="piggy">
-    <h3></h3>
-    <p></p>
-    <img src="" alt="">
-    </article>
+    <article></article>
 
 
 
@@ -32,15 +28,15 @@
         console.log(`Dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`);
 
 
-           const destination = document.querySelector("#piggy");
-            const piggyInfo = `Dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
+     const destination = document.querySelector("article");
 
+            destination.textContent =  `Dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
 
-            destination.querySelector("p").textContent = piggyInfo;
-            destination.querySelector("img").src =dyr.billede;
-
+            destination.innerHTML += `<br><img src="${dyr.billede}">`;
 
         }
+
+
 
     </script>
 
