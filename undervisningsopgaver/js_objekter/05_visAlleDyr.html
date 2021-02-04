@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>øvelse 4</title>
+</head>
+
+<body>
+
+    <section id="liste"></section>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("DOM loaded");
+
+            let femDyr = [{
+                    "navn": "gris",
+                    "type": "pattedyr",
+                    "levested": "køledisken",
+                    "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+                },
+                {
+                    "navn": "frø",
+                    "type": "amfibie",
+                    "levested": "åen",
+                    "billede": "http://mabe-kea.dk/E19/pics/frog.png"
+                },
+                {
+                    "navn": "ræv",
+                    "type": "pattedyr",
+                    "levested": "skoven",
+                    "billede": "http://mabe-kea.dk/E19/pics/fox.png"
+                },
+                {
+                    "navn": "sild",
+                    "type": "fisk",
+                    "levested": "tønden",
+                    "billede": "http://mabe-kea.dk/E19/pics/sild.png"
+                },
+                {
+                    "navn": "krokodille",
+                    "type": "krybdyr",
+                    "levested": "sumpen",
+                    "billede": "http://mabe-kea.dk/E19/pics/kroko.png"
+                }
+            ]
+
+            console.log(femDyr);
+
+
+            const listevisning = document.querySelector("#liste");
+            femDyr.forEach(dyr => {
+                listevisning.innerHTML += `<p>${dyr.navn}, ${dyr.type}, ${dyr.levested}</p>`;
+            })
+
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
