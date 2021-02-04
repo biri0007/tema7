@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>øvelse 4</title>
+</head>
+
+<body>
+
+    <article></article>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("DOM loaded");
+
+            let dyr = {
+                "navn": "gris",
+                "type": "pattedyr",
+                "billede": "http://mabe-kea.dk/E19/pics/pig.png",
+                "levested": "svinefarme"
+            }
+
+            console.log(`Dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`);
+
+
+            const destination = document.querySelector("article");
+
+            destination.textContent = `Dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
+
+            destination.innerHTML += `<br><img src="${dyr.billede}">`;
+
+
+
+
+            //ØVELSE 4
+
+            let femDyr = [{
+                    "navn": "gris",
+                    "type": "pattedyr",
+                    "levested": "køledisken",
+                    "billede": "http://mabe-kea.dk/E19/pics/pig.png"
+                },
+                {
+                    "navn": "frø",
+                    "type": "amfibie",
+                    "levested": "åen",
+                    "billede": "http://mabe-kea.dk/E19/pics/frog.png"
+                },
+                {
+                    "navn": "ræv",
+                    "type": "pattedyr",
+                    "levested": "skoven",
+                    "billede": "http://mabe-kea.dk/E19/pics/fox.png"
+                },
+                {
+                    "navn": "sild",
+                    "type": "fisk",
+                    "levested": "tønden",
+                    "billede": "http://mabe-kea.dk/E19/pics/sild.png"
+                },
+                {
+                    "navn": "krokodille",
+                    "type": "krybdyr",
+                    "levested": "sumpen",
+                    "billede": "http://mabe-kea.dk/E19/pics/kroko.png"
+                }
+            ]
+
+
+            console.log(femDyr);
+
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
