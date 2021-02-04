@@ -18,7 +18,7 @@
 
     {
         "mærke": "tesla",
-        "model": s ",
+        "model": "s",
         "motor": "el",
         "km": 1000,
         "udstyr": ["gps", "aircon", "soltag"]
