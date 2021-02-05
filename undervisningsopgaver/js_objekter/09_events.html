@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>øvelse 7</title>
+
+    <style>
+     * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width:70vw;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <section id="liste"></section>
+
+    <template>
+        <section>
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+        </section>
+    </template>
+    </main>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("DOM loaded");
+
+            let events = [{
+                    "navn": "A Calling",
+                    "info": "Christian Bengtson | Danmark | 20 min | 2019",
+                    "billede": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/W6dOqabNhHKBPXxxKKEZRA84.jpg"
+                },
+                {
+                    "navn": "A Hole In My Heart",
+                    "info": "Mees Peijnenburg | Holland | 9 min | 2015",
+                    "billede": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/Q8K1pZrOs03Q0IrDkBwGVu5r.jpg"
+                },
+                {
+                    "navn": "A Place In The Sun - 110 years after the genocide",
+                    "info": "Christian Zipfel | Tyskland | 20 min | 2018",
+                    "billede": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/hUd4SdGQ8I23ovxWnGtBz4Ck.jpg"
+                },
+                {
+                    "navn": "A Tower of Two",
+                    "info": "Jacob Krzysztof Glogowski | Danmark | 21 min | 2019",
+                    "billede": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/Zdt2ODEqSVOkNe8nUaSSu8kd.jpg"
+                },
+                {
+                    "navn": "A Worthy Man",
+                    "info": "Kristian Håskjold | Danmark | 19 min | 2018",
+                    "billede": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/2iUOgQpixgIQCxyLtY6KiYuU.jpg"
+                }
+            ]
+
+
+            const listevisning = document.querySelector("#liste");
+            const template = document.querySelector("template");
+
+
+            events.forEach(event => {
+                let klon = template.cloneNode(true).content;
+
+                klon.querySelector("h3").textContent += event.navn;
+                klon.querySelector("img").src = event.billede;
+                klon.querySelector("img").alt = event.navn;
+                klon.querySelector("p").textContent = event.info;
+
+                //tilføj klon til tagget
+                listevisning.appendChild(klon);
+            })
+        }
+
+    </script>
+
+
+</body>
+
+</html>
