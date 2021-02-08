@@ -3,9 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>07.02.01babushka</title>
+    <title>07.02.01 babushka</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;700&display=swap" rel="stylesheet">
 
     <style>
+        * {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+
         #liste {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -17,24 +25,63 @@
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
+
         }
+
+        h1 {
+/*           font-family: 'IBM Plex Sans', sans-serif;*/
+            font-size: 2em;
+            font-weight: 700;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+
+        h2 {
+/*        font-family: 'IBM Plex Sans', sans-serif;*/
+            font-size: 1.5em;
+            font-weight: 700;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+
+        h3 {
+/*            font-family: 'IBM Plex Sans', sans-serif;*/
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+
+        p {
+/*            font-family: 'IBM Plex Sans', sans-serif;*/
+            font-size: 0.85em;
+            font-weight: 400;
+        }
+
 
         img {
             max-width: 100%;
+            border-radius: 7px;
         }
 
         nav {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            padding: 20px;
-            gap: 10px
+            gap: 10px;
         }
 
         button {
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 50px;
             border: 0;
+
+/*            font-family: 'IBM Plex Sans', sans-serif;*/
+            font-weight: 400;
         }
 
         .valgt {
@@ -49,15 +96,17 @@
 <body>
 
     <header>
-        <h1>Alle</h1>
+        <h1>Bistro Babushka</h1>
 
         <nav>
-            <button data-kategori="alle" class="valgt">Alle retter</button>
-            <button data-kategori="forretter">Forretter</button>
-            <button data-kategori="hovedretter">Hovedretter</button>
-            <button data-kategori="desserter">Desserter</button>
-            <button data-kategori="sideorders">Side orders</button>
+            <button data-kategori="alle" class="valgt">ALLE RETTER</button>
+            <button data-kategori="forretter">FORRETTER</button>
+            <button data-kategori="hovedretter">HOVEDRETTER</button>
+            <button data-kategori="desserter">DESSERTER</button>
+            <button data-kategori="sideorders">SIDE ORDERS</button>
         </nav>
+
+        <h2>Alle retter</h2>
     </header>
 
 
@@ -69,7 +118,7 @@
     <template>
         <article>
             <img class="billede">
-            <h2 class="navn"></h2>
+            <h3 class="navn"></h3>
             <p class="beskrivelse1"></p>
             <p class="beskrivelse2"></p>
             <p class="oprindelse">Oprindelsesregion: </p>
@@ -80,7 +129,7 @@
 
 
     <script>
-        const header = document.querySelector("header h1");
+        const header = document.querySelector("header h2");
         const medieurl = "https://babushka-dd8a.restdb.io/media/";
         const myHeaders = {
 
