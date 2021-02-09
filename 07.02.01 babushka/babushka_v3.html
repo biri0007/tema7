@@ -138,17 +138,14 @@
                     document.querySelector("#detaljer h3").textContent = `${ret.navn}`;
                     document.querySelector("#detaljer img").src = medieurl + ret.billede;
                     document.querySelector("#detaljer .beskrivelse2").textContent = ret.langbeskrivelse;
-                    document.querySelector("#detaljer .oprindelse").textContent += `${ret.oprindelsesregion}`;
-                    document.querySelector("#detaljer .pris").textContent += `${ret.pris},-`;
+                    document.querySelector("#detaljer .oprindelse").textContent = `Oprindelsesregion: ${ret.oprindelsesregion}`;
+                    document.querySelector("#detaljer .pris").textContent = `Pris: ${ret.pris},-`;
                 }
             })
 
         }
-
     </script>
 
 
 
-</body>
-
-</html>
+</body></html>
