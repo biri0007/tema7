@@ -29,7 +29,7 @@
         }
 
         h1 {
-/*           font-family: 'IBM Plex Sans', sans-serif;*/
+            /*           font-family: 'IBM Plex Sans', sans-serif;*/
             font-size: 2em;
             font-weight: 700;
 
@@ -40,7 +40,7 @@
         }
 
         h2 {
-/*        font-family: 'IBM Plex Sans', sans-serif;*/
+            /*        font-family: 'IBM Plex Sans', sans-serif;*/
             font-size: 1.5em;
             font-weight: 700;
 
@@ -51,13 +51,13 @@
         }
 
         h3 {
-/*            font-family: 'IBM Plex Sans', sans-serif;*/
+            /*            font-family: 'IBM Plex Sans', sans-serif;*/
             font-size: 1.4em;
             font-weight: 700;
         }
 
         p {
-/*            font-family: 'IBM Plex Sans', sans-serif;*/
+            /*            font-family: 'IBM Plex Sans', sans-serif;*/
             font-size: 0.85em;
             font-weight: 400;
         }
@@ -80,7 +80,7 @@
             border-radius: 50px;
             border: 0;
 
-/*            font-family: 'IBM Plex Sans', sans-serif;*/
+            /*            font-family: 'IBM Plex Sans', sans-serif;*/
             font-weight: 400;
         }
 
@@ -88,6 +88,7 @@
             background-color: darkseagreen;
             color: white;
         }
+
     </style>
 </head>
 
@@ -176,24 +177,27 @@
             const skabelon = document.querySelector("template").content; // select indhold af html skabelon (article)
             dest.textContent = "";
 
-            kategorier.forEach(kategori => {
+            kategorier.forEach(ret => {
 
-                if (filter == kategori.kategori || filter == "alle") {
+                if (filter == ret.kategori || filter == "alle") {
                     // loop igennem json
                     const klon = skabelon.cloneNode(true);
-                    klon.querySelector("img").src = medieurl + kategori.billede[0];
-                    klon.querySelector(".navn").textContent = kategori.navn;
-                    klon.querySelector(".beskrivelse1").innerHTML = "<b>" + kategori.kortbeskrivelse + "</b>";
-                    klon.querySelector(".beskrivelse2").textContent = kategori.langbeskrivelse;
-                    klon.querySelector(".oprindelse").textContent += `${kategori.oprindelsesregion}`;
-                    klon.querySelector(".pris").textContent += `${kategori.pris},-`;
+                    klon.querySelector("img").src = medieurl + ret.billede[0];
+                    klon.querySelector(".navn").textContent = ret.navn;
+                    klon.querySelector(".beskrivelse1").innerHTML = "<b>" + ret.kortbeskrivelse + "</b>";
+                    klon.querySelector(".beskrivelse2").textContent = ret.langbeskrivelse;
+                    klon.querySelector(".oprindelse").textContent += `${ret.oprindelsesregion}`;
+                    klon.querySelector(".pris").textContent += `${ret.pris},-`;
                     dest.appendChild(klon);
 
                 }
             })
         }
+
     </script>
 
 
 
-</body></html>
+</body>
+
+</html>
