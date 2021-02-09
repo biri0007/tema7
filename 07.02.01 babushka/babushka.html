@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>07.02.01babushka</title>
+
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            margin: 40px;
+        }
+
+        article {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+    <!--det er i main-tagget, at template bliver sat ind-->
+    <main></main>
+
+    <section></section>
+
+    <template>
+        <article>
+            <img class="billede">
+            <h2 class="navn"></h2>
+            <p class="beskrivelse1"></p>
+            <p class="beskrivelse2"></p>
+            <p class="oprindelse">Oprindelsesregion: </p>
+            <p class="pris">Pris: </p>
+        </article>
+    </template>
+
+
+
+    <script>
+        const url = "https://babushka-dd8a.restdb.io/rest/menu";
+
+        const medieurl = "https://babushka-dd8a.restdb.io/media/";
+
+        const options = {
+            headers: {
+                'x-apikey': "600ec2fb1346a1524ff12de4"
+            }
+        };
+
+        async function hentData() {
+            const resspons = await fetch(url, options);
+            const json = await resspons.json();
+            vis(json);
+        }
+
+        const main = document.querySelector("main");
+        const template = document.querySelector("template").content;
+
+        function vis(json) {
+            console.log(json);
+
+            json.forEach(menu => {
+                const klon = template.cloneNode(true);
+                klon.querySelector("img").src = medieurl + menu.billede[0];
+                klon.querySelector(".navn").textContent = menu.navn;
+                klon.querySelector(".beskrivelse1").innerHTML = "<b>" + menu.kortbeskrivelse + "</b>";
+                klon.querySelector(".beskrivelse2").textContent = menu.langbeskrivelse;
+                klon.querySelector(".oprindelse").textContent += `${menu.oprindelsesregion}`;
+                klon.querySelector(".pris").textContent += `${menu.pris},-`;
+                main.appendChild(klon);
+            })
+        }
+
+        hentData();
+
+    </script>
+
+
+
+</body>
+
+</html>
