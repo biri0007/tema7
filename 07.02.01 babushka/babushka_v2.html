@@ -88,7 +88,6 @@
             background-color: darkseagreen;
             color: white;
         }
-
     </style>
 </head>
 
@@ -188,16 +187,22 @@
                     klon.querySelector(".beskrivelse2").textContent = ret.langbeskrivelse;
                     klon.querySelector(".oprindelse").textContent += `${ret.oprindelsesregion}`;
                     klon.querySelector(".pris").textContent += `${ret.pris},-`;
+
+                    klon.querySelector("article").addEventListener("click", () => visDetaljer(ret));
+
                     dest.appendChild(klon);
 
                 }
             })
         }
 
+        function visDetaljer(hvilken) {
+            console.log("visDetaljer");
+
+            location.href = `babushka_detail.html?id=${hvilken._id}`;
+        }
     </script>
 
 
 
-</body>
-
-</html>
+</body></html>
