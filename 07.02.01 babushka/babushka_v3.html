@@ -1,0 +1,73 @@
+<!-- DENNE UDGAVE LAVER POP UP MED DETALJER -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>07.02.01 babushka</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <header>
+        <h1>Bistro Babushka</h1>
+
+        <nav>
+            <button data-kategori="alle" class="valgt">ALLE RETTER</button>
+            <button data-kategori="forretter">FORRETTER</button>
+            <button data-kategori="hovedretter">HOVEDRETTER</button>
+            <button data-kategori="desserter">DESSERTER</button>
+            <button data-kategori="sideorders">SIDE ORDERS</button>
+        </nav>
+
+        <h2>Alle retter</h2>
+    </header>
+
+
+
+
+
+
+    <div id="detaljer">
+        <img class="billede">
+        <h3 class="navn">Loading navn...</h3>
+
+        <p class="beskrivelse2">Loading lang beskrivelse...</p>
+        <p class="oprindelse">Loading oprindelsesregion... – Oprindelsesregion: </p>
+        <p class="pris">Loading pris... – Pris: </p>
+
+    </div>
+
+
+
+
+
+    <!--det er i main-tagget, at template bliver sat ind-->
+    <main></main>
+
+
+    <section id="liste"></section>
+
+    <template>
+        <article>
+            <img class="billede">
+            <h3 class="navn"></h3>
+            <p class="beskrivelse1"></p>
+            <p class="beskrivelse2"></p>
+            <p class="oprindelse">Oprindelsesregion: </p>
+            <p class="pris">Pris: </p>
+        </article>
+    </template>
+
+
+    <script src="script.js"></script>
+</body></html>
