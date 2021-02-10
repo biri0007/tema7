@@ -15,6 +15,41 @@
         }
 
 
+        document.querySelector("nav button:nth-child(1)").addEventListener("mouseover", hoverColor);
+        document.querySelector("nav button:nth-child(1)").addEventListener("mouseout", hoverColorOff);
+
+        document.querySelector("nav button:nth-child(2)").addEventListener("mouseover", hoverColor);
+        document.querySelector("nav button:nth-child(2)").addEventListener("mouseout", hoverColorOff);
+
+        document.querySelector("nav button:nth-child(3)").addEventListener("mouseover", hoverColor);
+        document.querySelector("nav button:nth-child(3)").addEventListener("mouseout", hoverColorOff);
+
+        document.querySelector("nav button:nth-child(4)").addEventListener("mouseover", hoverColor);
+        document.querySelector("nav button:nth-child(4)").addEventListener("mouseout", hoverColorOff);
+
+        document.querySelector("nav button:nth-child(5)").addEventListener("mouseover", hoverColor);
+        document.querySelector("nav button:nth-child(5)").addEventListener("mouseout", hoverColorOff);
+
+        function hoverColor() {
+            this.classList.toggle("hoverfade");
+            console.log("hoverColor");
+        }
+
+        function hoverColorOff() {
+            this.classList.toggle("hoverfade");
+            console.log("hoverColorOff");
+        }
+
+
+
+
+
+
+
+
+
+        // JS DER STYRER ARRAY STUFF
+
 
         let kategorier;
         let filter = "alle";
@@ -32,7 +67,6 @@
 
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt");
-
 
             visKategorier();
             header.textContent = this.textContent;
