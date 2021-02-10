@@ -7,6 +7,15 @@
         }
 
         document.addEventListener("DOMContentLoaded", start);
+
+        document.querySelector("#tilmenu").addEventListener("click", tilMenu);
+
+        function tilMenu() {
+            console.log("tilMenu");
+        }
+
+
+
         let kategorier;
         let filter = "alle";
 
@@ -53,9 +62,9 @@
                     const klon = skabelon.cloneNode(true);
                     klon.querySelector("img").src = medieurl + ret.billede[0];
                     klon.querySelector(".navn").textContent = ret.navn;
-                    klon.querySelector(".beskrivelse1").innerHTML = "<b>" + ret.kortbeskrivelse + "</b>";
-                    klon.querySelector(".beskrivelse2").textContent = ret.langbeskrivelse;
-                    klon.querySelector(".oprindelse").textContent += `${ret.oprindelsesregion}`;
+                    klon.querySelector(".beskrivelse1").innerHTML = ret.kortbeskrivelse;
+                    //                    klon.querySelector(".beskrivelse2").textContent = ret.langbeskrivelse;
+                    //                    klon.querySelector(".oprindelse").textContent += `${ret.oprindelsesregion}`;
                     klon.querySelector(".pris").textContent += `${ret.pris},-`;
 
                     klon.querySelector("article").addEventListener("click", () => visDetaljer(ret)); //laver eventlistener på ret, der fører én til en funktion, hvor man kan se detaljer om den valgte ret
