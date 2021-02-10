@@ -9,6 +9,10 @@
             height: 100vh;
         }
 
+        #tilmenu {
+            cursor: pointer;
+        }
+
         #menuknap {
             position: absolute;
             bottom: 5.5vh;
@@ -95,6 +99,8 @@
 
             font-weight: 400;
             letter-spacing: 0.1em;
+
+            cursor: pointer;
         }
 
 
@@ -136,10 +142,12 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
 
-            border: 1px solid black;
-            border-radius: 10px;
-            padding: 15px;
+            background-color: #f7f7f7;
+            border-radius: 20px;
+            padding: 20px 15px;
             margin: 15px;
+
+            cursor: pointer;
         }
 
         article img {
@@ -192,6 +200,7 @@
 
             margin: auto 250px;
             background-color: #f7f7f7;
+            border: 2px solid #295629d1;
             border-radius: 15px;
             padding-top: 10px;
         }
