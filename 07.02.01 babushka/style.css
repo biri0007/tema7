@@ -116,7 +116,6 @@
         }
 
 
-
         .valgt {
             background-color: #364336;
             color: white;
@@ -133,15 +132,46 @@
 
 
         article {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+
             border: 1px solid black;
             border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
+            padding: 15px;
+            margin: 15px;
         }
 
         article img {
             max-width: 90%;
             border-radius: 7px;
+
+            grid-column: 1/span 3;
+            grid-row: 1/span 1;
+            place-self: center;
+        }
+
+        article .navn {
+            grid-column: 1/span 2;
+            grid-row: 2/span 1;
+
+            margin: 15px;
+        }
+
+        article .pris {
+            grid-column: 3/span 1;
+            grid-row: 2/span 1;
+            text-align: end;
+
+            font-weight: 700;
+            margin: 15px;
+        }
+
+        article .beskrivelse1 {
+            grid-column: 1/span 3;
+            grid-row: 3/span 1;
+
+            margin: 0 15px;
         }
 
 
@@ -151,9 +181,6 @@
             font-weight: 400;
         }
 
-        article .pris {
-            font-weight: 700;
-        }
 
 
 
