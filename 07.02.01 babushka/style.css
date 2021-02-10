@@ -8,22 +8,56 @@
         }
 */
 
-        #liste {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            margin: 40px;
+        #splash {
+            background-image: url("https://picsum.photos/1200/700");
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            /*
+                 background-position: 90%;
+                 max-width: none;
+                 padding: 0;
+*/
         }
 
-        article {
-            border: 1px solid black;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
+        #menuknap {
+            position: absolute;
+            bottom: 5.5vh;
+            right: 45vw;
+
+            background-color: transparent;
+            color: #364336;
+            font-weight: 700;
         }
 
-        article img {
-            max-width: 80%;
-            border-radius: 7px;
+        #pil {
+            position: absolute;
+            bottom: -2vh;
+            right: 47.8vw;
+
+            background-color: transparent;
+            color: #364336;
+
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .hop {
+            animation-name: hop_kf;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            transition-timing-function: ease-in;
+        }
+
+        @keyframes hop_kf {
+            0% {
+                transform: translateY(-0vw);
+            }
+
+            100% {
+                transform: translateY(-0.3vw);
+            }
         }
 
         h1 {
@@ -82,9 +116,35 @@
         }
 
 
+        /*STYLING AF LOOP VIEW*/
+
+        #liste {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            margin: 40px;
+        }
+
+
+        article {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        article img {
+            max-width: 90%;
+            border-radius: 7px;
+        }
+
+        article .pris {
+            font-weight: 700;
+        }
+
+
 
         /*STYLING AF SINGLE VIEW*/
-        div {
+        #detaljer {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
@@ -92,7 +152,7 @@
             margin: auto 250px;
             background-color: #f7f7f7;
             border-radius: 15px;
-            padding-top: 15px;
+            padding-top: 10px;
         }
 
         div img {
