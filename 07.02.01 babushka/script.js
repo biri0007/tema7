@@ -123,7 +123,8 @@
 
             function singleView() {
                 console.log("singleView");
-                document.querySelector("#detaljer").classList.toggle("unhide");
+                document.querySelector("#detaljer").classList.remove("hide");
+                document.querySelector("#detaljer").classList.add("unhide");
                 document.querySelector("#overlay").classList.add("blur");
             }
 
