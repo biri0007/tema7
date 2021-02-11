@@ -2,15 +2,12 @@
             font-family: 'IBM Plex Sans', sans-serif;
         }
 
+        /*
         #splash {
-            background-image: url("https://picsum.photos/1200/700");
+            background-image: url("bb_splash.png");
             background-size: cover;
             width: 100%;
             height: 100vh;
-        }
-
-        #tilmenu {
-            cursor: pointer;
         }
 
         #menuknap {
@@ -51,9 +48,12 @@
             100% {
                 transform: translateY(-0.3vw);
             }
+        }*/
+
+        #logo {
+            width: 15%;
+            margin: 35px auto;
         }
-
-
 
         h1 {
             font-size: 2em;
