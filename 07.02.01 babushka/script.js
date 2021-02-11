@@ -122,7 +122,17 @@
             hverRet.forEach(enkeltret => enkeltret.addEventListener("click", singleView));
 
             function singleView() {
+                console.log("singleView");
                 document.querySelector("#detaljer").classList.toggle("unhide");
             }
+
+            document.querySelector(".x").addEventListener("click", lukSingleView);
+
+            function lukSingleView() {
+                console.log("lukSingleView");
+                document.querySelector("#detaljer").classList.remove("unhide");
+                document.querySelector("#detaljer").classList.add("hide");
+            }
+
 
         }
