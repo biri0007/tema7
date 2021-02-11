@@ -194,7 +194,7 @@
 
         /*STYLING AF SINGLE VIEW*/
         #detaljer {
-            display: grid;
+            /*            display: grid;*/
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
 
@@ -251,4 +251,8 @@
 
         .hide {
             display: none;
+        }
+
+        .unhide {
+            display: grid;
         }
