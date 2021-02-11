@@ -43,11 +43,6 @@
 
 
 
-
-
-
-
-
         // JS DER STYRER ARRAY STUFF
 
 
@@ -119,5 +114,15 @@
                     document.querySelector("#detaljer .pris").textContent = `Pris: ${ret.pris},-`;
                 }
             })
+
+
+
+            // SINGLE VIEW POP-UP VED KLIK PÅ RET
+            const hverRet = document.querySelectorAll("article");
+            hverRet.forEach(enkeltret => enkeltret.addEventListener("click", singleView));
+
+            function singleView() {
+                document.querySelector("#detaljer").classList.toggle("unhide");
+            }
 
         }
