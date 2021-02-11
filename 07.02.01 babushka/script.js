@@ -8,11 +8,11 @@
 
         document.addEventListener("DOMContentLoaded", start);
 
-        document.querySelector("#tilmenu").addEventListener("click", tilMenu);
-
-        function tilMenu() {
-            console.log("tilMenu");
-        }
+//        document.querySelector("#tilmenu").addEventListener("click", tilMenu);
+ //
+ //        function tilMenu() {
+ //            console.log("tilMenu");
+ //        }
 
 
         document.querySelector("nav button:nth-child(1)").addEventListener("mouseover", hoverColor);
