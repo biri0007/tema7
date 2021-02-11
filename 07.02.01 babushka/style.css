@@ -274,3 +274,9 @@
         .unhide {
             display: grid;
         }
+
+        .blur {
+            z-index: 200;
+            background-color: white;
+            opacity: 30%;
+        }

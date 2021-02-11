@@ -8,11 +8,11 @@
 
         document.addEventListener("DOMContentLoaded", start);
 
-//        document.querySelector("#tilmenu").addEventListener("click", tilMenu);
- //
- //        function tilMenu() {
- //            console.log("tilMenu");
- //        }
+        //        document.querySelector("#tilmenu").addEventListener("click", tilMenu);
+        //
+        //        function tilMenu() {
+        //            console.log("tilMenu");
+        //        }
 
 
         document.querySelector("nav button:nth-child(1)").addEventListener("mouseover", hoverColor);
@@ -124,6 +124,7 @@
             function singleView() {
                 console.log("singleView");
                 document.querySelector("#detaljer").classList.toggle("unhide");
+                document.querySelector("#overlay").classList.add("blur");
             }
 
             document.querySelector(".x").addEventListener("click", lukSingleView);
@@ -132,6 +133,7 @@
                 console.log("lukSingleView");
                 document.querySelector("#detaljer").classList.remove("unhide");
                 document.querySelector("#detaljer").classList.add("hide");
+                document.querySelector("#overlay").classList.remove("blur");
             }
 
 

@@ -17,32 +17,6 @@
 
 <body>
 
-    <!--
-    <section id="splash">
-        <div id="tilmenu">
-            <button id="menuknap">MENU</button>
-            <p id="pil" class="hop">&#8964;</p>
-        </div>
-    </section>
--->
-
-
-    <header>
-        <div id="logo">
-            <img src="bb_logo.png">
-        </div>
-
-        <nav>
-            <button data-kategori="alle" class="valgt">ALLE RETTER</button>
-            <button data-kategori="forretter">FORRETTER</button>
-            <button data-kategori="hovedretter">HOVEDRETTER</button>
-            <button data-kategori="desserter">DESSERTER</button>
-            <button data-kategori="sideorders">SIDE ORDERS</button>
-        </nav>
-
-        <h2>Alle retter</h2>
-    </header>
-
 
     <div id="detaljer" class="hide">
         <p class="x">✕</p>
@@ -54,29 +28,58 @@
     </div>
 
 
-    <!--det er i main-tagget, at template bliver sat ind-->
-    <main></main>
+    <div id="overlay" class="">
 
 
-    <section id="liste"></section>
-
-    <template>
-        <article>
-            <img class="billede">
-            <h3 class="navn"></h3>
-            <p class="pris">Pris: </p>
-            <p class="beskrivelse1"></p>
-            <!--            <p class="beskrivelse2"></p>-->
-            <!--            <p class="oprindelse">Oprindelsesregion: </p>-->
-        </article>
-    </template>
+        <!--
+    <section id="splash">
+        <div id="tilmenu">
+            <button id="menuknap">MENU</button>
+            <p id="pil" class="hop">&#8964;</p>
+        </div>
+    </section>
+-->
 
 
+        <header>
+            <div id="logo">
+                <img src="bb_logo.png">
+            </div>
 
+            <nav>
+                <button data-kategori="alle" class="valgt">ALLE RETTER</button>
+                <button data-kategori="forretter">FORRETTER</button>
+                <button data-kategori="hovedretter">HOVEDRETTER</button>
+                <button data-kategori="desserter">DESSERTER</button>
+                <button data-kategori="sideorders">SIDE ORDERS</button>
+            </nav>
+
+            <h2>Alle retter</h2>
+        </header>
+
+
+        <!--det er i main-tagget, at template bliver sat ind-->
+        <main></main>
+
+
+        <section id="liste"></section>
+
+        <template>
+            <article>
+                <img class="billede">
+                <h3 class="navn"></h3>
+                <p class="pris">Pris: </p>
+                <p class="beskrivelse1"></p>
+                <!--            <p class="beskrivelse2"></p>-->
+                <!--            <p class="oprindelse">Oprindelsesregion: </p>-->
+            </article>
+        </template>
+
+
+
+    </div>
 
     <script src="script.js"></script>
 
 
-</body>
-
-</html>
+</body></html>
